@@ -1,5 +1,5 @@
-from flask import render_template
-from app import 
+from flask import render_template    #Takes in the name of the template.
+from app import app
 
 #Views
 @app.route('/')
