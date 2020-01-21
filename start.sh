@@ -1,3 +1,3 @@
-export SECRET_KEY=<Your secret key>
+export SECRET_KEY= 'c8840fc92e6bea3838173d4599e18439'
 
-python3.7 manage.py server
+python3.6 manage.py server
