@@ -1,21 +1,19 @@
-<div class="navbar navbar-inverse" role="navigation">
+<div class="navbar navbar-light" role="navigation" style="margin-bottom:0; border-bottom: 1px solid;color:black;">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">RTK POOLS  </a>
+            <a href="/" class="navbar-brand"> One Minute Perfect Pitch </a>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About-Us</a></li>
-                <li><a href="/">Gallery</a></li>
-                
-        </div>
-
-    </div>
-</div>
+        <div class="navbar-collapse collapse" style="font-family: 'Oswald', sans-serif; font-size:20px;text-decoration:none;">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{{url_for('main.pickup_pitches')}}">Pickup Lines</a></li>
+                    <li><a href="{{url_for('main.interview_pitches')}}">Interview</a></li>
+                    <li><a href="{{url_for('main.product_pitches')}}">Product</a></li>
+                    <li><a href="{{url_for('main.promotion_pitches')}}">Promotion</a></li>
+                </ul>
