@@ -11,12 +11,9 @@ class User(db.Model,UserMixin):
     email = db.Column(db.String(255),unique= True,nullable=False)
     username =db.Column(db.String(255),unique =True,nullable=False)
     password_hash = db.Column(db.String())
-    bio=db.Column(db.String(255),nullable=False)
+    bio=db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     booking=db.relationship('Book', backref='book',lazy='dynamic')
-
-
-
 
     @property
     def password(self):
