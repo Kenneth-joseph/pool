@@ -1,0 +1,25 @@
+
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+ 
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ranga" rel="stylesheet">
+<div class="jumbotron text-center" style="background-color: #75caf5; color: #ffffff; padding: 55px 25px; font-family: 'Gloria Hallelujah', cursive;">
+    <h1>BOOK</h1>
+</div>
+
+
+
+<div class="mt-5">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2 class="text-center">Book Here</h2>
+            {{wtf.quick_form(form)}}
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+{%endblock%}
