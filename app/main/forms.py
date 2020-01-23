@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,TextAreaField,SubmitField
+from wtforms import StringField,TextAreaField,SubmitField,SelectField
 from wtforms.validators import Required
 
 class UpdateProfile(FlaskForm):
@@ -10,8 +10,8 @@ class UpdateProfile(FlaskForm):
 #     content=TextAreaField('comment on blog', validators=[Required()])
 #     submit=SubmitField('comment')
 
-class BookForm(FlaskForm):
-    name = StringField('Title',validators=[Required()])
-    category = SelectField('Category',choices=[('Technology','Technology'),('Music','Music'),('Sports','Sports')],validators = [Required()])
-    post = TextAreaField('Your blog', validators = [Required()])
-    submit = SubmitField('share your blog')
+# class BookForm(FlaskForm):
+#     name = StringField('Title',validators=[Required()])
+#     category = SelectField('Category',choices=[('Technology','Technology'),('Music','Music'),('Sports','Sports')],validators = [Required()])
+#     post = TextAreaField('Your blog', validators = [Required()])
+#     submit = SubmitField('share your blog')

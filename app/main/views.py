@@ -3,12 +3,8 @@ from flask_login import login_required,current_user
 from ..models import User,Book
 from .. import db,photos
 from . import main
-<<<<<<< HEAD
 from .forms import UpdateProfile
 
-=======
-from .forms import BookForm
->>>>>>> 8eb44f4c4df9df0085786f91b05d3bb427563797
 
 from flask_bootstrap import Bootstrap
 
@@ -38,11 +34,11 @@ def about():
     return render_template('about-us.html')
 
 
-@main.route('/book')
-@login_required
-def book():
+# @main.route('/book')
+# @login_required
+# def book():
 
-    return render_template('book.html')
+#     return render_template('book.html')
 
 @main.route('/user/<uname>')
 def profile(uname):
