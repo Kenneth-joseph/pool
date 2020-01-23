@@ -8,7 +8,7 @@ class User(db.Model,UserMixin):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer,primary_key = True)
-    email = db.Column(db.String(255),unique= True,nullable=False)
+    email = db.Column(db.String(255),unique= True,nullable=False)#why
     username =db.Column(db.String(255),unique =True,nullable=False)
     password_hash = db.Column(db.String())
     bio=db.Column(db.String(255))

@@ -1,19 +1,40 @@
 {% extends 'base.html' %}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/about.css')}}">
+{% endblock %}
 
 
 {%block content%}
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ranga" rel="stylesheet">
+<div class="jumbotron text-center"
 <div class="jumbotron text-center" style="background-color: #75caf5; color: #ffffff; padding: 55px 25px; font-family: 'Gloria Hallelujah', cursive;">
     <h1>About-Us</h1>
 </div>
 <div class="container" style="font-family: 'Indie+Flower', cursive;">
-    <h2>Welcome to RTK pools where you will experience an unfogettable pool cleanliness. Here at RTK we not 
+    <h1>the team</h1>
+    <!-- <h2>Welcome to RTK pools where you will experience an unfogettable pool cleanliness. Here at RTK we not 
         only focus on hygiene of the swimmers but also we look into the safety of them. We specilise in the booking aspect of the pool
         in that a client has to book for a session inorder to swim. This really helps in the swimmers hygiene and cleanliness.
         We are located in Hardy near coo-operative university in Nairobi.
-    </h2>
-    
-    
+    </h2> -->
+    <div class="images">
+        <h3><img src="../static/photos/ken.jpeg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+            kenneth joseph .leader and commander of chief,come up with the idea and handle the database section
+        </h3>
+        <h3><img src="../static/photos/trevor.jpeg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+            trevor ngugi .hardworking person help with the backend and front end
+        </h3>
+        <h3><img src="../static/photos/greg.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+            greg katono .talented person did mostly the fron end and graphic design of the website
+        </h3>
+    </div>
+    <h1>our location</h1>
+    <img src="../static/photos/location.png" alt="location" style="width:170px;height:170px;margin-right:15px;">
+    <h2>contact us</h2>
+    <h3>@ngugitrevor@gmail.com</h3>
+<!-- try and change the size of the page -->
+
 </div>
 {%endblock%}

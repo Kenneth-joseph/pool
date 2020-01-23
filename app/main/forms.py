@@ -2,10 +2,9 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,SelectField,TextAreaField,SubmitField,IntegerField
 from wtforms.validators import Required
 
-
-# class CommentForm(FlaskForm):
-#     content=TextAreaField('comment on blog', validators=[Required()])
-#     submit=SubmitField('comment')
+class UpdateProfile(FlaskForm):
+    bio = TextAreaField('Tell us about you.',validators = [Required()])
+    submit = SubmitField('Submit')
 
 class BookForm(FlaskForm):
     name = StringField('Name',validators=[Required()])
@@ -14,4 +13,3 @@ class BookForm(FlaskForm):
 
 class SlotForm(FlaskForm):
     slot=IntegerField('Book Slots', validators=[Required()])
-
