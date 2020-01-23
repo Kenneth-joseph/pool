@@ -14,19 +14,25 @@ def index():
 
     return render_template ('index.html')
 
-@main.route('/book')
+@main.route('/book',methods=['GET','POST'])
 @login_required
 def book():
+    form=BookForm()
+    if form.validate_on_submit():
+        name=form.name.data
+        tday=form.tday.data
+        user_id=current_user
 
-
-    return render_template('book/book.html')
+        new_book= Book(name=name,tday=tday,user_id=current_user._get_current_object().id)
+        new_book.save_book()
+        return redirect(url_for('main.index'))
+    return render_template('book/book.html',form=form)
 
 @main.route('/gallery')
 @login_required
 def gallery():
 
     return render_template('gallery.html')
-
 
 @main.route('/about_us')
 def about():
