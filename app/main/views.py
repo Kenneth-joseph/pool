@@ -28,6 +28,6 @@ def about():
 
 @main.route('/book')
 @login_required
-def about():
+def book():
 
     return render_template('book.html')
