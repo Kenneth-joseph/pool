@@ -3,10 +3,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 80vh;
-    color:blue;
+    color:white;
     }
 
-.one p{
-    color:blue;
-}
+.one h4{
+    font-size:30px;
+    text-align: center;
+    padding-top:300px;
 
+    
+}
