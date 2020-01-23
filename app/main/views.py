@@ -23,6 +23,7 @@ def book():
         user_id=current_user
 
         new_book= Book(name=name,tday=tday,user_id=current_user._get_current_object().id)
+        
         new_book.save_book()
         return redirect(url_for('main.index'))
     return render_template('book/book.html',form=form)
