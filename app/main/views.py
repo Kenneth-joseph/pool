@@ -14,6 +14,7 @@ def index():
     return render_template ('index.html')
 
 @main.route('/gallery')
+@login_required
 def gallery():
 
     return render_template('gallery.html')
@@ -25,8 +26,8 @@ def about():
     return render_template('about-us.html')
 
 
-# @main.route('/book')
-# @login_required
-# def about():
+@main.route('/book')
+@login_required
+def about():
 
-#     return render_template('book.html')
+    return render_template('book.html')

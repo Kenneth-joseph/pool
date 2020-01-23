@@ -7,6 +7,8 @@ from flask_login import LoginManager
 bootstrap = Bootstrap()
 db = SQLAlchemy()
 login_manager = LoginManager()
+login_manager.session_protection = 'strong'
+login_manager.login_view = 'auth.login'
 
 def create_app(config_name):
 
@@ -14,8 +16,8 @@ def create_app(config_name):
 
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
-    login_manager.session_protection = 'strong'
-    login_manager.login_view = 'auth.login'
+    # login_manager.session_protection = 'strong' ken code
+    # login_manager.login_view = 'auth.login'
     login_manager.login_message = "You must be logged in to access this page."
 
 
@@ -31,7 +33,8 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     from.auth import auth as auth_blueprint
-    app.register_blueprint(auth_blueprint)
+    #app.register_blueprint(auth_blueprint) ken code
+    app.register_blueprint(auth_blueprint,url_prefix = '/authenticate')
     # Will add the views and forms
 
     return app
