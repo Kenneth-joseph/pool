@@ -28,7 +28,8 @@ def login():
             login_user(user,form.remember.data)
             return redirect(request.args.get('next') or url_for('main.book'))
         flash('Invalid username and password')
-    return render_template('auth/login.html',loginform=form)
+    title = "horizons login"
+    return render_template('auth/login.html',loginform=form,title=title)
 
 
 @auth.route('/logout')
