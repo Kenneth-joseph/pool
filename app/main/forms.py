@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,SelectField,TextAreaField,SubmitField
+from wtforms import StringField,SelectField,TextAreaField,SubmitField,IntegerField
 from wtforms.validators import Required
 
 
@@ -8,7 +8,10 @@ from wtforms.validators import Required
 #     submit=SubmitField('comment')
 
 class BookForm(FlaskForm):
-    name = StringField('Title',validators=[Required()])
-    category = SelectField('Category',choices=[('Technology','Technology'),('Music','Music'),('Sports','Sports')],validators = [Required()])
-    post = TextAreaField('Your blog', validators = [Required()])
-    submit = SubmitField('share your blog')
+    name = StringField('Name',validators=[Required()])
+    tday = SelectField('Time of the Day',choices=[('Morning','Morning'),('Noon','Noon'),('Evening','Evening')],validators = [Required()])
+    submit= SubmitField('Book')
+
+class SlotForm(FlaskForm):
+    slot=IntegerField('Book Slots', validators=[Required()])
+
