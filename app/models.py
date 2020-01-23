@@ -42,7 +42,7 @@ class Book(db.Model):
     __tablename__ = 'book'
 
     id = db.Column(db.Integer,primary_key = True)
-    name= db.Column(db.String(),)
+    name= db.Column(db.String(60),nullable=False)
     age=db.Column(db.Integer,nullable=False)
     user_id= db.Column(db.Integer,db.ForeignKey('users.id'))
 
@@ -52,6 +52,13 @@ class Book(db.Model):
 
     def __repr__(self):
         return f'Book {self.name}'
+
+class Session(db.Model):
+
+    __tablename__ = 'sessions'
+      
+    id=db.Column(db.Integer,primary_key=True)
+    
 
 
 

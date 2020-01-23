@@ -1,7 +1,27 @@
 {% extends 'base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
 
+
+{%block styles%}
+    {{ super() }}
+    <!-- <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Upright" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!--link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"-->
+{%endblock%}
+
+
 {% block content%}
+<div class="jumbotron text-center" style="background-color: #75caf5; color: #e8f0f3; padding: 55px 25px; font-family: 'Gloria Hallelujah', cursive;">
+    <h1>HORIZON POOLS</h1>
+</div>
+
+
+
+
 <div class="container mt-5 table">
     <div class="row">
         <div class="col-md-3"></div>
