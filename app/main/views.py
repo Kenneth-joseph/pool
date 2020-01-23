@@ -3,7 +3,7 @@ from flask_login import login_required,current_user
 from ..models import User,Book
 from .. import db
 from . import main
-
+from .forms import BookForm
 
 from flask_bootstrap import Bootstrap
 
@@ -12,6 +12,13 @@ def index():
      
 
     return render_template ('index.html')
+
+@main.route('/book')
+# @login_required
+def book():
+    
+
+    return render_template('book/book.html')
 
 @main.route('/gallery')
 def gallery():
@@ -25,8 +32,3 @@ def about():
     return render_template('about-us.html')
 
 
-# @main.route('/book')
-# @login_required
-# def about():
-
-#     return render_template('book.html')

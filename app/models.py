@@ -14,6 +14,8 @@ class User(db.Model,UserMixin):
     bio=db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     booking=db.relationship('Book', backref='book',lazy='dynamic')
+    booking=db.relationship('Session', backref='slots',lazy='dynamic')
+
 
     @property
     def password(self):
@@ -43,7 +45,8 @@ class Book(db.Model):
 
     id = db.Column(db.Integer,primary_key = True)
     name= db.Column(db.String(60),nullable=False)
-    age=db.Column(db.Integer,nullable=False)
+    day=db.Column(db.DateTime,default=datetime.utcnow)
+    tday=db.Column(db.String(255),nullable=False)
     user_id= db.Column(db.Integer,db.ForeignKey('users.id'))
 
     def save_book(self):
@@ -55,9 +58,12 @@ class Book(db.Model):
 
 class Session(db.Model):
 
-    __tablename__ = 'sessions'
+    __tablename__ = 'slots'
       
     id=db.Column(db.Integer,primary_key=True)
+    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+    book_id=db.Column(db.Integer,db.ForeignKey('book.id'))
+    slots=db.Column(db.Integer,nullable=False)
     
 
 
