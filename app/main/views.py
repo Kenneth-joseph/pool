@@ -14,9 +14,9 @@ def index():
     return render_template ('index.html')
 
 @main.route('/book')
-# @login_required
+@login_required
 def book():
-    
+
 
     return render_template('book/book.html')
 

@@ -63,7 +63,7 @@ class Session(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
     book_id=db.Column(db.Integer,db.ForeignKey('book.id'))
-    slots=db.Column(db.Integer,nullable=False)
+    slot=db.Column(db.Integer,nullable=False)
     
 
 
