@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Upright" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--link rel="styleshhet" href="{{url_for('static',filename='css/bootstrap.css')}}"
 
     <!--link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"-->
 {%endblock%}
@@ -15,11 +18,28 @@
 {%block content%}
 
 <div class="jumbotron text-center" style="background-color: #75caf5; color: #e8f0f3; padding: 55px 25px; font-family: 'Gloria Hallelujah', cursive;">
-    <h1>HORIZON POOLS</h1>
+    <h1 class>HORIZON </h1><h1></h1><h1>POOLS</h1>
 </div>
+<br>
+<br>
 
-<div class="container">
-  <h2>Photos</h2>
+<div class ="jumbotron text-center" style="font-family: 'Poppins', sans-serif; background-color: #75d6f3; color: #131414;">
+  <h3>WELCOME TO HORIZON POOL</h3>
+  <br>
+  
+  <h4>It is a pool booking website where you can book a pool session for 2 hours.For the number of people who are booking,you can book for only 
+    20 slots.NOTHING MORE!This is to prevent over-crowding and to enhance hygiene as it has come to be major problem in swimming pools.You are required
+    to sign-in first in-order to see available slots and of-course book!
+    
+  </h4>
+
+</div>
+<br>
+<br>
+<br>
+
+<div class="c">
+  <h2 style="text-align: center; font-family: 'Bebas Neue', cursive;"> Photos</h2>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -29,7 +49,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <!--div class="carousel-inner">
+    <div class="carousel-inner">
 
       <div class="item active">
         <img src="../static/photos/WhatsApp Image 2020-01-22 at 10.11.51.jpeg" alt="" style="width:100%;">
@@ -50,19 +70,19 @@
       <div class="item">
         <img src="../static/photos/WhatsApp Image 2020-01-22 at 11.51.04.jpeg" alt="New York" style="width:100%;">
         <div class="carousel-caption">
-          <h3>Safety</h3>
+          <h3 style ="text-align: center;">Safety</h3>
           <p>Floaters are available at horizon.</p>
         </div>
       </div>
   
-<!--carosel-->
 
-<div class="row">
+
+<!--div class="row">
     <div class="col-lg-12 col-md-6">
         <div id="carouselExampleControls" class="carousel slide slid" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active first"> 
-                <img src="/app/static/photos/WhatsApp Image 2020-01-22 at 10.11.51.jpeg" class="d-block w-100 img-fliud" alt="one">
+                <img src="../static/photos/WhatsApp Image 2020-01-22 at 10.11.51.jpeg" class="d-block w-100 img-fliud" alt="one">
                 <div class="carousel-caption d-none d-md-block text1">
                     <h1>WATCH THE SUNSET IN OUR LUXURY POOLS </h1>
   
@@ -73,7 +93,7 @@
               </div>
               <div class="carousel-item" >
   
-                <img src="images/nn.jpg" class="d-block w-100 img-fliud" alt="two">
+                <img src="../static/photos/WhatsApp Image 2020-01-22 at 11.51.04.jpeg" class="d-block w-100 img-fliud" alt="two">
                 <div class="carousel-caption d-none d-md-block text2">
                     <h1>A VIEW OF THE MOUNTAINS</h1>
   
@@ -84,7 +104,7 @@
               </div>
   
               <div class="carousel-item">
-                <img src="images/m1.jpg" class="d-block w-100 img-fliud" alt="three">
+                <img src="../static/photos/WhatsApp Image 2020-01-22 at 10.14.07.jpeg" class="d-block w-100 img-fliud" alt="three">
                 <div class="carousel-caption d-none d-md-block  text3 font-weight-bolder">
                     <h1>NIGHT SWIMMING</h1>
   
@@ -107,6 +127,8 @@
       
       
     </div>
+  </!--div>
+
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -119,6 +141,17 @@
     </a>
   </div>
 </div>
+<div id="us">
+  <h1 class="contact">CONTACT US</h1>
+  <input id="name" type="text" placeholder="Name..." >
+  <input id="email" type="email" placeholder="Email..." >
+  <br>
+  <textarea id="textarea" name="message" cols="90" rows="8" placeholder="Your message here..."></textarea>
+  <button class="button" type="submit">Submit</button>
+  <strong><p id="answer"></p></strong>
+</div> 
+
+
 
 
 {%endblock%}
