@@ -1,14 +1,91 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html'%}
 
 {%block content%}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ranga" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+
 <div class="jumbotron text-center" style="background-color: #75caf5; color: #ffffff; padding: 55px 25px; font-family: 'Gloria Hallelujah', cursive;">
     <h1>Gallery</h1>
 </div>
-<div class="container" style="font-family: 'Indie+Flower', cursive;">
-    
+<div class="container-fluid" style="font-family: 'Indie+Flower', cursive;">
+    <div class="row pt-5">
+ 
+        <div class="col-lg-3 col-md-6 work pic1">
+            <img src="../static/photos/g1.jpg " class="img-fluid">
+            <p class="pd txt1">Hey this is this ultimate swimming pool experience</p>
+      
+            
+        </div>
+      
+        <div class="col-lg-3 col-md-6 work pic2">
+            <img src="../static/photos/g3.jpg" class="img-fluid">
+            <p class="pd txt2">Bring your kids along for more fun </p>
+      
+        </div>
+      
+        <div class="col-lg-3 col-md-6 pt work pic3">
+      
+            <img src="../static/photos/g6.jpg" class="img-fluid">
+                  <p class="pd txt3">Indoor swimming is also available </p>
+        </div>
+      
+      
+        <div class="col-lg-3 col-md-6 work pic4">
+      
+            <img src="../static/photos/gal4.jpg" class="img-fluid">
+            <p class="pd txt4">Hot tubs anyone? </p>
+        </div>
+      <!--row2-->
+      
+        <div class="col-lg-3 col-md-6 pt-5 work pic5">
+            <img src="../static/photos/g2.jpg " class="img-fluid">
+            <p class="pd txt5">Swim in the sun all day! </p>
+      
+        </div>
+      
+        <div class="col-lg-3 col-md-6 pt-5 work pic6">
+            <img src="../static/photos/gal3.jpg" class="img-fluid">
+            <p class="pd txt6">Special areas allocated for your child's safety </p>
+        </div>
+      
+        <div class="col-lg-3 col-md-6 pt-5 work pic7">
+            <img src="../static/photos/G.jpg" class="img-fluid">
+            <p class="pd txt7">Olympic size swimming pools for the athletes</p>
+        </div>
+      
+        <div class="col-lg-3 col-md-6 pt-5 work pic8">
+            <img src="../static/photos/GA.jpg" class="img-fluid">
+      
+            <p class="pd txt8">FRESHIG UP IS ESSENTIAL</p>
+        </div>
+      <!--row3-->
+       
+      <div class="col-lg-3 col-md-6 pt-5 work pic9">
+          <img src="../static/photos/P3.jpg " class="img-fluid">
+          <p class="pd txt9"> With mother nature in the background.</p>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 pt-5 work pic10">
+          <img src="../static/photos/P4.jpg" class="img-fluid">
+      
+          <p class="pd txt10">Perfect for a romantic evening swim</p>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 pt-5 work pic11">
+          <img src="../static/photos/pico.jpg" class="img-fluid">
+          <p class="pd txt11">For our pro user,,wanna enjoy infinity pools? </p>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 pt-5 work pic12">
+          <img src="../static/photos/PP.jpg" class="img-fluid">
+      
+         
+          <p class="pd txt12">luxury is in house </p>
+      </div>
+      
+      </div>
     
 </div>
 {%endblock%}
