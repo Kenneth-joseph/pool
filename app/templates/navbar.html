@@ -26,18 +26,11 @@
                     <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
                     <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
                     {% else %}
-                    <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                    <!-- <li><a href="{{url_for('auth.login')}}">Sign in</a></li> -->
+                    <li><a href="{{url_for('auth.login')}}" ><i class="fas fa-sign-in-alt" >&nbsp; Log In</i></a></li>
                     {%endif%}
             </ul>
-            <form class="form-inline my-2 my-lg-0 mt-2">
-
-                <!-- <button class="btn btn-success my-2 my-sm-0" >LOGIN</button> -->
-                <a href="{{url_for('auth.login')}}" class="btn btn-info" style="float: right;"
-                    role="button">Login</a>&nbsp;&nbsp;
-                <a href="{{url_for('auth.register')}}" class="btn btn-info" style="float: right;"
-                    role="button">Register</a>
-
-            </form>
+            
 
 
 
@@ -45,8 +38,8 @@
         </div>
                     
 <!--  ken icon-->
-                    <a href="{{url_for('auth.login')}}" ><i class="fas fa-sign-in-alt" style="float: right;">&nbsp;
-                        Log In</i></a>
-                     </div>
+                    <!-- <a href="{{url_for('auth.login')}}" ><i class="fas fa-sign-in-alt" style="float: right;">&nbsp;
+                        Log In</i></a> -->
+                     
     </div>
 </div>
