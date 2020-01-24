@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 .one{
     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)),url("../static/photos/1.jpg");
     background-repeat: no-repeat;
@@ -17,7 +17,10 @@
     font-family: 'Pacifico', cursive;
     
 }
+.elabo,p{
+    font-family: 'Gelasio', serif;
+}
 
-.c{
-  background-color: ;
+#motto{
+    font-family: 'Pacifico', cursive;
 }
