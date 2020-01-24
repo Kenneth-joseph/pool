@@ -21,8 +21,9 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_authenticated %} -->
-                    <!-- <li style="color:#75caf5;;padding:15px;">{{current_user.username}}</li> -->  <!--shows the username-->
-                    <!-- <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+<!-- <li style="color:#75caf5;;padding:15px;">{{current_user.username}}</li> -->
+<!--shows the username-->
+<!-- <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
                     <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
                     {% else %}
                     
@@ -31,7 +32,7 @@
             </ul>
         
                 </form> -->
-                <!-- <ul class ="navbar-nav ml-auto">
+<!-- <ul class ="navbar-nav ml-auto">
                     {% if current_user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" style= 'margin-right:30px' data-toggle="dropdown"
@@ -45,34 +46,43 @@
                           {%endif%}
         
                 </ul>                     -->
-            <!-- </div> -->
+<!-- </div> -->
 
 {%block content%}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><i class="fas fa-swimmer"> Horizon</i></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="{{url_for('main.index')}}">Home</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url_for('main.about')}}">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url_for('main.gallery')}}">Gallery</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url_for('main.book')}}">Book</a>
-      </li>
+    <a class="navbar-brand" href="#"><i class="fas fa-swimmer"> Horizon</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarNav"
+        aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('main.index')}}">Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('main.about')}}">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('main.gallery')}}">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('main.book')}}">Book</a>
+            </li>
+        </ul>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_authenticated %}
+        <!-- <li style="color:white;padding:15px;">{{current_user.username}}</li> -->
+        <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+        <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+        {% else %}
+        <a href="{{url_for('auth.login')}}"><i class="fas fa-sign-in-alt" style="float: right;">&nbsp; Log In</i></a>
+        {%endif%}
     </ul>
-  </div>
-  <a href="{{url_for('auth.login')}}" ><i class="fas fa-sign-in-alt"  style="float: right;">&nbsp; Log In</i></a>          
+   
 
 </nav>
 
 
-    {%endblock%}
-                    
+{%endblock%}
