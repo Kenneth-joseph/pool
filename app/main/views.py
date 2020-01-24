@@ -30,7 +30,6 @@ def book():
     return render_template('book/book.html',form=form)
 
 @main.route('/gallery')
-@login_required
 def gallery():
 
     return render_template('gallery.html')

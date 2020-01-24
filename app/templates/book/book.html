@@ -22,4 +22,18 @@
         <div class="col-md-4"></div>
     </div>
 </div>
+
+
+<div class="row">
+{% for blog_post in book %}
+<div class="card p-3 ml-3 mt-4" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ blog_post.name}}</h5>
+      <h5 class="card-title">{{ blog_post.tday}}</h5>
+      <button type="button" class="btn btn-primary btn-lg">{{blog_post.tday}}</button>
+
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {%endblock%}
